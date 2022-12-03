@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// this is the set of allowed characters
 const characterString string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func readInput(filename string) []string {
