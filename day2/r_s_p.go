@@ -49,17 +49,15 @@ func RoundScore(p1, p2 string) int {
 	playScore := winRound(p1, p2)
 	toolScore := 0
 
-	if p2 == "R" {
+	switch p2 {
+	case "R":
 		toolScore = 1
-	}
-
-	if p2 == "P" {
+	case "P":
 		toolScore = 2
-	}
-
-	if p2 == "S" {
+	case "S":
 		toolScore = 3
 	}
+
 
 	return playScore + toolScore
 }
