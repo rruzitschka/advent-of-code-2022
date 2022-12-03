@@ -7,6 +7,8 @@ import (
 	"strings"
 )
 
+const characterString string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 func readInput(filename string) []string {
 
 	readFile, err := os.Open(filename)
@@ -71,14 +73,13 @@ func findPriority(c string) int {
 
 	//assigns prio value based on position in characterString
 
-	characterString := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	return strings.Index(characterString, c) + 1
 }
 
 func main() {
-	characterString := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 	var sameCharacter string
-	inputList := readInput("/Users/roru/Desktop/inputDay3.txt")
+	inputList := readInput("/Users/wzhroru/Desktop/inputDay3.txt")
 
 	// part 1
 	var totalPriority int
